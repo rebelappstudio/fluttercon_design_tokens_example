@@ -1,7 +1,3 @@
-library app_theme;
-
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/colors/app_colors.dart';
+export 'src/spacing/app_spacing.dart';
+export 'src/theme/app_theme.dart';
