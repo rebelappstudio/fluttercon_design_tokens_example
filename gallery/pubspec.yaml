@@ -1,5 +1,5 @@
-name: fluttercon_design_tokens_example
-description: A example project to demonstrate usage of design tokens with flutter.
+name: gallery
+description: A gallery project to visualize design tokens, individual components and views.
 publish_to: "none"
 
 version: 1.0.0+1
@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   app_theme:
-    path: ./packages/app_theme
+    path: ../packages/app_theme
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
