@@ -1,2 +1,2 @@
 export 'bottom_nav_bar.dart';
-export 'contact_item.dart';
+export 'chat_list_item.dart';
