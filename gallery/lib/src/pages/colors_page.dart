@@ -10,34 +10,107 @@ class ColorsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final appColors = Theme.of(context).colorScheme;
-    final primaryColors = [
+    final materialColors = Theme.of(context).colorScheme;
+    final materialColorItems = [
       _ColorItem(
         name: 'Primary',
-        color: appColors.primary,
+        color: materialColors.primary,
       ),
       _ColorItem(
         name: 'OnPrimary',
-        color: appColors.onPrimary,
+        color: materialColors.onPrimary,
       ),
       _ColorItem(
         name: 'PrimaryContainer',
-        color: appColors.primaryContainer,
+        color: materialColors.primaryContainer,
       ),
       _ColorItem(
         name: 'OnPrimaryContainer',
-        color: appColors.onPrimaryContainer,
+        color: materialColors.onPrimaryContainer,
+      ),
+    ];
+
+    final customColors = Theme.of(context).extension<AppColors>()!;
+    final customColorItems = [
+      _ColorItem(
+        name: 'Primary',
+        color: customColors.colorPrimary,
+      ),
+      _ColorItem(
+        name: 'TextError',
+        color: customColors.textError,
+      ),
+      _ColorItem(
+        name: 'TextFocus',
+        color: customColors.textFocus,
+      ),
+      _ColorItem(
+        name: 'TextSuccess',
+        color: customColors.textSuccess,
+      ),
+      _ColorItem(
+        name: 'TextOnButton',
+        color: customColors.textOnButton,
+      ),
+      _ColorItem(
+        name: 'TextOnWarning',
+        color: customColors.textOnWarning,
+      ),
+      _ColorItem(
+        name: 'TextOnButtonDeactive',
+        color: customColors.textOnButtonDeactive,
+      ),
+      _ColorItem(
+        name: 'BackgroundDefault',
+        color: customColors.backgroundDefault,
+      ),
+      _ColorItem(
+        name: 'BackgroundPrimary',
+        color: customColors.backgroundPrimary,
+      ),
+      _ColorItem(
+        name: 'BackgroundSecondary',
+        color: customColors.backgroundSecondary,
+      ),
+      _ColorItem(
+        name: 'BackgroundTertiary',
+        color: customColors.backgroundTertiary,
+      ),
+      _ColorItem(
+        name: 'ForegroundDimmed',
+        color: customColors.foregroundDimmed,
+      ),
+      _ColorItem(
+        name: 'ForegroundDefault',
+        color: customColors.foregroundDefault,
+      ),
+      _ColorItem(
+        name: 'ForegroundSecondary',
+        color: customColors.foregroundSecondary,
+      ),
+      _ColorItem(
+        name: 'ForegroundDeactive',
+        color: customColors.foregroundDeactive,
+      ),
+      _ColorItem(
+        name: 'ForegroundOnPrimary',
+        color: customColors.foregroundOnPrimary,
       ),
     ];
 
     final colors = [
       _ColorGroup(
-        title: 'Primary',
-        items: primaryColors,
+        title: 'Material colors',
+        items: materialColorItems,
+      ),
+      _ColorGroup(
+        title: 'Custom colors',
+        items: customColorItems,
       ),
     ];
 
     return Scaffold(
+      backgroundColor: customColors.backgroundDefault,
       appBar: AppBar(
         title: const Text('Colors'),
       ),
@@ -73,7 +146,7 @@ class _ColorGroup extends StatelessWidget {
             title,
             style: Theme.of(context).textTheme.headlineMedium,
           ),
-          const SizedBox(height: AppSpacing.m),
+          SizedBox(height: AppSpacing.xLarge),
           Expanded(
             child: SingleChildScrollView(
               child: Column(
@@ -97,9 +170,9 @@ class _ColorItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppSpacing.s,
-        vertical: AppSpacing.m,
+      padding: EdgeInsets.symmetric(
+        horizontal: AppSpacing.large,
+        vertical: AppSpacing.xLarge,
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -108,7 +181,7 @@ class _ColorItem extends StatelessWidget {
             name,
             style: Theme.of(context).textTheme.labelMedium,
           ),
-          const SizedBox(height: AppSpacing.m),
+          SizedBox(height: AppSpacing.xLarge),
           _ColorTile(color: color),
         ],
       ),

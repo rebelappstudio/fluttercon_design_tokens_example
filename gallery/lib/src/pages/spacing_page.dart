@@ -10,10 +10,14 @@ class SpacingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const spacingList = [
-      _SpacingItem(spacing: AppSpacing.s, name: 's'),
-      _SpacingItem(spacing: AppSpacing.m, name: 'm'),
-      _SpacingItem(spacing: AppSpacing.l, name: 'l'),
+    final spacingList = [
+      _SpacingItem(spacing: AppSpacing.zero, name: 'zero'),
+      _SpacingItem(spacing: AppSpacing.tiny, name: 'tiny'),
+      _SpacingItem(spacing: AppSpacing.xSmall, name: 'xSmall'),
+      _SpacingItem(spacing: AppSpacing.small, name: 'small'),
+      _SpacingItem(spacing: AppSpacing.large, name: 'large'),
+      _SpacingItem(spacing: AppSpacing.xLarge, name: 'xLarge'),
+      _SpacingItem(spacing: AppSpacing.huge, name: 'huge'),
     ];
 
     return Scaffold(
@@ -33,7 +37,7 @@ class _SpacingItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final appColors = Theme.of(context).extension<AppColors>()!;
     return Padding(
-      padding: const EdgeInsets.all(AppSpacing.s),
+      padding: EdgeInsets.all(AppSpacing.large),
       child: Row(
         children: <Widget>[
           Row(
@@ -41,22 +45,22 @@ class _SpacingItem extends StatelessWidget {
             children: <Widget>[
               Container(
                 color: appColors.colorPrimary,
-                width: AppSpacing.s,
-                height: AppSpacing.m,
+                width: AppSpacing.large,
+                height: AppSpacing.xLarge,
               ),
               Container(
                 width: spacing,
-                height: AppSpacing.m,
+                height: AppSpacing.xLarge,
                 color: appColors.colorPrimary,
               ),
               Container(
                 color: appColors.colorPrimary,
-                width: AppSpacing.l,
-                height: AppSpacing.m,
+                width: AppSpacing.huge,
+                height: AppSpacing.xLarge,
               ),
             ],
           ),
-          const SizedBox(width: AppSpacing.s),
+          SizedBox(width: AppSpacing.large),
           Text(name),
         ],
       ),

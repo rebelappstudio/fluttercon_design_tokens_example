@@ -18,8 +18,8 @@ class _FormViewState extends State<FormView> {
           const Text(
             'This page is:',
           ),
-          const SizedBox(
-            height: AppSpacing.l,
+          SizedBox(
+            height: AppSpacing.huge,
           ),
           Text(
             'Form',

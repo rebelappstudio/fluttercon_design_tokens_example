@@ -27,10 +27,10 @@ class _ChatsViewState extends State<ChatsView> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(
-            left: AppSpacing.m,
-            right: AppSpacing.m,
-            bottom: AppSpacing.s,
+          padding: EdgeInsets.only(
+            left: AppSpacing.xLarge,
+            right: AppSpacing.xLarge,
+            bottom: AppSpacing.large,
           ),
           child: Row(
             children: [

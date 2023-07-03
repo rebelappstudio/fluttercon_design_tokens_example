@@ -12,14 +12,17 @@ class AppTheme {
   ThemeData get themeData {
     return ThemeData(
       colorScheme: _colorScheme,
+      textTheme: _textTheme,
       useMaterial3: true,
     );
   }
 
-  /// Primary color scheme
+  /// Seeded color scheme
   ColorScheme get _colorScheme {
     return ColorScheme.fromSeed(seedColor: AppColors.light.colorPrimary);
   }
+
+  TextTheme get _textTheme => _commonTextTheme(AppColors.light);
 }
 
 /// {@template app_dark_theme}
@@ -33,4 +36,15 @@ class AppDarkTheme extends AppTheme {
   ColorScheme get _colorScheme {
     return ColorScheme.fromSeed(seedColor: AppColors.dark.colorPrimary);
   }
+
+  @override
+  TextTheme get _textTheme => _commonTextTheme(AppColors.dark);
+}
+
+TextTheme _commonTextTheme(AppColors colors) {
+  return const TextTheme().apply(
+    bodyColor: colors.foregroundDefault,
+    displayColor: colors.foregroundDefault,
+    decorationColor: colors.foregroundDefault,
+  );
 }
