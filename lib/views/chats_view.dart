@@ -17,15 +17,6 @@ class _ChatsViewState extends State<ChatsView> {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        const Padding(
-          padding: EdgeInsets.all(20.0),
-          child: SearchBar(
-            leading: Icon(Icons.menu),
-            trailing: [
-              Icon(Icons.search),
-            ],
-          ),
-        ),
         Padding(
           padding: EdgeInsets.only(
             left: AppSpacing.xLarge,

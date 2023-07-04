@@ -110,7 +110,6 @@ class ColorsPage extends StatelessWidget {
     ];
 
     return Scaffold(
-      backgroundColor: customColors.backgroundDefault,
       appBar: AppBar(
         title: const Text('Colors'),
       ),
@@ -144,7 +143,9 @@ class _ColorGroup extends StatelessWidget {
         children: <Widget>[
           Text(
             title,
-            style: Theme.of(context).textTheme.headlineMedium,
+            style: Theme.of(context)
+                .textTheme
+                .headlineMedium
           ),
           SizedBox(height: AppSpacing.xLarge),
           Expanded(
@@ -179,7 +180,9 @@ class _ColorItem extends StatelessWidget {
         children: <Widget>[
           Text(
             name,
-            style: Theme.of(context).textTheme.labelMedium,
+            style: Theme.of(context)
+                .textTheme
+                .labelMedium
           ),
           SizedBox(height: AppSpacing.xLarge),
           _ColorTile(color: color),

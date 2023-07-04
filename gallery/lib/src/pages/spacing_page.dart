@@ -61,7 +61,9 @@ class _SpacingItem extends StatelessWidget {
             ],
           ),
           SizedBox(width: AppSpacing.large),
-          Text(name),
+          Text(
+            name,
+          ),
         ],
       ),
     );
