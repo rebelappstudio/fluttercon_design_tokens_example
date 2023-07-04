@@ -19,9 +19,9 @@ class _ChatsViewState extends State<ChatsView> {
       children: <Widget>[
         Padding(
           padding: EdgeInsets.only(
-            left: AppSpacing.xLarge,
-            right: AppSpacing.xLarge,
-            bottom: AppSpacing.large,
+            left: AppSpacing.normal,
+            right: AppSpacing.normal,
+            bottom: AppSpacing.small,
           ),
           child: Row(
             children: [

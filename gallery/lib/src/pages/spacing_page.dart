@@ -14,7 +14,9 @@ class SpacingPage extends StatelessWidget {
       _SpacingItem(spacing: AppSpacing.zero, name: 'zero'),
       _SpacingItem(spacing: AppSpacing.tiny, name: 'tiny'),
       _SpacingItem(spacing: AppSpacing.xSmall, name: 'xSmall'),
-      _SpacingItem(spacing: AppSpacing.small, name: 'small'),
+      _SpacingItem(spacing: AppSpacing.base, name: 'base'),
+      _SpacingItem(spacing: AppSpacing.small, name: 'large'),
+      _SpacingItem(spacing: AppSpacing.normal, name: 'normal'),
       _SpacingItem(spacing: AppSpacing.large, name: 'large'),
       _SpacingItem(spacing: AppSpacing.xLarge, name: 'xLarge'),
       _SpacingItem(spacing: AppSpacing.huge, name: 'huge'),
@@ -37,30 +39,30 @@ class _SpacingItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final appColors = Theme.of(context).extension<AppColors>()!;
     return Padding(
-      padding: EdgeInsets.all(AppSpacing.large),
+      padding: EdgeInsets.all(AppSpacing.small),
       child: Row(
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
               Container(
-                color: appColors.colorPrimary,
-                width: AppSpacing.large,
-                height: AppSpacing.xLarge,
+                color: appColors.textFocus,
+                width: AppSpacing.tiny,
+                height: AppSpacing.normal,
               ),
               Container(
                 width: spacing,
-                height: AppSpacing.xLarge,
+                height: AppSpacing.normal,
                 color: appColors.colorPrimary,
               ),
               Container(
-                color: appColors.colorPrimary,
-                width: AppSpacing.huge,
-                height: AppSpacing.xLarge,
+                color: appColors.textFocus,
+                width: AppSpacing.tiny,
+                height: AppSpacing.normal,
               ),
             ],
           ),
-          SizedBox(width: AppSpacing.large),
+          SizedBox(width: AppSpacing.small),
           Text(
             name,
           ),

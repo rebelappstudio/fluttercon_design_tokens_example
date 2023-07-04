@@ -7,17 +7,17 @@ class AppDimensions {
 
   static const spacingSizeXSmall = 4;
 
-  static const spacingSizeDefault = 4;
+  static const spacingSizeBase = 8;
 
-  static const spacingSizeSmall = 8;
+  static const spacingSizeSmall = 12;
 
-  static const spacingSizeNormal = 8;
+  static const spacingSizeNormal = 16;
 
-  static const spacingSizeLarge = 12;
+  static const spacingSizeLarge = 20;
 
-  static const spacingSizeXLarge = 20;
+  static const spacingSizeXLarge = 32;
 
-  static const spacingSizeHuge = 24;
+  static const spacingSizeHuge = 40;
 
   static const lineHeightLoose40 = 48;
 
@@ -26,6 +26,18 @@ class AppDimensions {
   static const lineHeightNormal32 = 32;
 
   static const lineHeightXSmall20 = 20;
+
+  static const letterSpacingLetterSpacingWide = 2;
+
+  static const letterSpacingLetterSpacingTight = -3;
+
+  static const letterSpacingLetterSpacingXWide = 12;
+
+  static const letterSpacingLetterSpacingNormal = 0;
+
+  static const dimensionParagraphIndentDefault = 0;
+
+  static const paragraphSpacingParagraphSpacingDefault = 0;
 
   static const fontSizePx48 = 36;
 
@@ -40,18 +52,6 @@ class AppDimensions {
   static const fontSizeFontSizePx24 = 24;
 
   static const fontSizeFontSizePx48 = 36;
-
-  static const letterSpacingLetterSpacingWide = 2;
-
-  static const letterSpacingLetterSpacingTight = -3;
-
-  static const letterSpacingLetterSpacingXWide = 12;
-
-  static const letterSpacingLetterSpacingNormal = 0;
-
-  static const dimensionParagraphIndentDefault = 0;
-
-  static const paragraphSpacingParagraphSpacingDefault = 0;
 
   AppDimensions._();
 }

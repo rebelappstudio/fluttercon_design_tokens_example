@@ -19,7 +19,7 @@ class _FormViewState extends State<FormView> {
             'This page is:',
           ),
           SizedBox(
-            height: AppSpacing.huge,
+            height: AppSpacing.large,
           ),
           Text(
             'Form',

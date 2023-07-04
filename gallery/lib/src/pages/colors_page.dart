@@ -141,13 +141,8 @@ class _ColorGroup extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Text(
-            title,
-            style: Theme.of(context)
-                .textTheme
-                .headlineMedium
-          ),
-          SizedBox(height: AppSpacing.xLarge),
+          Text(title, style: Theme.of(context).textTheme.headlineMedium),
+          SizedBox(height: AppSpacing.normal),
           Expanded(
             child: SingleChildScrollView(
               child: Column(
@@ -172,19 +167,14 @@ class _ColorItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: AppSpacing.large,
-        vertical: AppSpacing.xLarge,
+        horizontal: AppSpacing.small,
+        vertical: AppSpacing.normal,
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Text(
-            name,
-            style: Theme.of(context)
-                .textTheme
-                .labelMedium
-          ),
-          SizedBox(height: AppSpacing.xLarge),
+          Text(name, style: Theme.of(context).textTheme.labelMedium),
+          SizedBox(height: AppSpacing.normal),
           _ColorTile(color: color),
         ],
       ),
