@@ -2,10 +2,9 @@ import 'package:app_theme/src/tokens/tokens_light/colors.dart' as light_colors;
 import 'package:app_theme/src/tokens/tokens_dark/colors.dart' as dark_colors;
 import 'package:flutter/material.dart';
 
-/// App colors
+/// Available custom colors
 @immutable
 class AppColors extends ThemeExtension<AppColors> {
-  /// App colors default constructor
   const AppColors({
     required this.colorPrimary,
     required this.textError,

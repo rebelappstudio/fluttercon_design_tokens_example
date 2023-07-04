@@ -1,6 +1,6 @@
 import 'package:app_theme/src/tokens/tokens_light/dimensions.dart';
 
-/// Available spacing values for app
+/// Available custom spacing values
 abstract class AppSpacing {
   /// zero spacing value (1pt)
   static double zero = AppDimensions.spacingSizeZero.toDouble();

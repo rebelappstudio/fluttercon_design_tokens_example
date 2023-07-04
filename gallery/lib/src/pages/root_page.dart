@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../gallery.dart';
 
-
 class RootPage extends StatelessWidget {
   const RootPage({super.key});
 
@@ -20,6 +19,12 @@ class RootPage extends StatelessWidget {
         title: const Text('Spacings'),
         subtitle: const Text('All of the predefined spacings'),
         onTap: () => Navigator.of(context).push<void>(SpacingPage.route()),
+      ),
+      ListItem(
+        icon: const Icon(Icons.text_fields),
+        title: const Text('Typography'),
+        subtitle: const Text('All of the predefined typography'),
+        onTap: () => Navigator.of(context).push<void>(TypographyPage.route()),
       ),
     ];
 
