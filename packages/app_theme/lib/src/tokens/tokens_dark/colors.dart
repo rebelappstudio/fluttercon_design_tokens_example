@@ -125,17 +125,19 @@ class AppColors {
   
   static const informative900 = Color(0xff1e3a8a); 
   
-  static const textError = Color(0xfff87171); 
+  static const primaryDefault = Color(0xff7c3aed); 
   
-  static const textFocus = Color(0xffa78bfa); 
+  static const buttonTextError = Color(0xfff87171); 
   
-  static const textSuccess = Color(0xff86efac); 
+  static const buttonTextFocus = Color(0xffa78bfa); 
   
-  static const textOnButton = Color(0xfff8fafc); 
+  static const buttonTextSuccess = Color(0xff86efac); 
   
-  static const textOnWarning = Color(0xff7f1d1d); 
+  static const buttonTextOnButton = Color(0xfff8fafc); 
   
-  static const textOnButtonDeactive = Color(0xffcbd5e1); 
+  static const buttonTextOnWarning = Color(0xff7f1d1d); 
+  
+  static const buttonTextOnButtonDeactive = Color(0xffcbd5e1); 
   
   static const background2nd = Color(0xff1e293b); 
   

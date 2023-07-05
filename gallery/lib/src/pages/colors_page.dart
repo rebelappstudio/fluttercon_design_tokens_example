@@ -38,27 +38,27 @@ class ColorsPage extends StatelessWidget {
       ),
       _ColorItem(
         name: 'TextError',
-        color: customColors.textError,
+        color: customColors.buttonTextError,
       ),
       _ColorItem(
         name: 'TextFocus',
-        color: customColors.textFocus,
+        color: customColors.buttonTextFocus,
       ),
       _ColorItem(
         name: 'TextSuccess',
-        color: customColors.textSuccess,
+        color: customColors.buttonTextSuccess,
       ),
       _ColorItem(
         name: 'TextOnButton',
-        color: customColors.textOnButton,
+        color: customColors.buttonTextOnButton,
       ),
       _ColorItem(
         name: 'TextOnWarning',
-        color: customColors.textOnWarning,
+        color: customColors.buttonTextOnWarning,
       ),
       _ColorItem(
         name: 'TextOnButtonDeactive',
-        color: customColors.textOnButtonDeactive,
+        color: customColors.buttonTextOnButtonDeactive,
       ),
       _ColorItem(
         name: 'BackgroundDefault',

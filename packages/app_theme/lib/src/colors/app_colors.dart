@@ -7,12 +7,12 @@ import 'package:flutter/material.dart';
 class AppColors extends ThemeExtension<AppColors> {
   const AppColors({
     required this.colorPrimary,
-    required this.textError,
-    required this.textFocus,
-    required this.textSuccess,
-    required this.textOnButton,
-    required this.textOnWarning,
-    required this.textOnButtonDeactive,
+    required this.buttonTextError,
+    required this.buttonTextFocus,
+    required this.buttonTextSuccess,
+    required this.buttonTextOnButton,
+    required this.buttonTextOnWarning,
+    required this.buttonTextOnButtonDeactive,
     required this.backgroundDefault,
     required this.backgroundPrimary,
     required this.backgroundSecondary,
@@ -27,23 +27,23 @@ class AppColors extends ThemeExtension<AppColors> {
   /// Primary seed color for material theme 3
   final Color colorPrimary;
 
-  /// Text color for error state
-  final Color textError;
+  /// Text color for button error state
+  final Color buttonTextError;
 
-  /// Text color for focus state
-  final Color textFocus;
+  /// Text color for button focus state
+  final Color buttonTextFocus;
 
-  /// Text color for success state
-  final Color textSuccess;
+  /// Text color for button success state
+  final Color buttonTextSuccess;
 
   /// Text color for on button state
-  final Color textOnButton;
+  final Color buttonTextOnButton;
 
   /// Text color for warning state
-  final Color textOnWarning;
+  final Color buttonTextOnWarning;
 
   /// Text color for on button deactive state
-  final Color textOnButtonDeactive;
+  final Color buttonTextOnButtonDeactive;
 
   /// Default background color
   final Color backgroundDefault;
@@ -93,12 +93,13 @@ class AppColors extends ThemeExtension<AppColors> {
   }) {
     return AppColors(
       colorPrimary: colorPrimary ?? this.colorPrimary,
-      textError: textError ?? this.textError,
-      textFocus: textFocus ?? this.textFocus,
-      textSuccess: textSuccess ?? this.textSuccess,
-      textOnButton: textOnButton ?? this.textOnButton,
-      textOnWarning: textOnWarning ?? this.textOnWarning,
-      textOnButtonDeactive: textOnButtonDeactive ?? this.textOnButtonDeactive,
+      buttonTextError: textError ?? this.buttonTextError,
+      buttonTextFocus: textFocus ?? this.buttonTextFocus,
+      buttonTextSuccess: textSuccess ?? this.buttonTextSuccess,
+      buttonTextOnButton: textOnButton ?? this.buttonTextOnButton,
+      buttonTextOnWarning: textOnWarning ?? this.buttonTextOnWarning,
+      buttonTextOnButtonDeactive:
+          textOnButtonDeactive ?? this.buttonTextOnButtonDeactive,
       backgroundDefault: backgroundDefault ?? this.backgroundDefault,
       backgroundPrimary: backgroundPrimary ?? this.backgroundPrimary,
       backgroundSecondary: backgroundSecondary ?? this.backgroundSecondary,
@@ -120,16 +121,22 @@ class AppColors extends ThemeExtension<AppColors> {
     return AppColors(
       colorPrimary:
           Color.lerp(colorPrimary, other.colorPrimary, t) ?? colorPrimary,
-      textError: Color.lerp(textError, other.textError, t) ?? textError,
-      textFocus: Color.lerp(textFocus, other.textFocus, t) ?? textFocus,
-      textSuccess: Color.lerp(textSuccess, other.textSuccess, t) ?? textSuccess,
-      textOnButton:
-          Color.lerp(textOnButton, other.textOnButton, t) ?? textOnButton,
-      textOnWarning:
-          Color.lerp(textOnWarning, other.textOnWarning, t) ?? textOnWarning,
-      textOnButtonDeactive:
-          Color.lerp(textOnButtonDeactive, other.textOnButtonDeactive, t) ??
-              textOnButtonDeactive,
+      buttonTextError: Color.lerp(buttonTextError, other.buttonTextError, t) ??
+          buttonTextError,
+      buttonTextFocus: Color.lerp(buttonTextFocus, other.buttonTextFocus, t) ??
+          buttonTextFocus,
+      buttonTextSuccess:
+          Color.lerp(buttonTextSuccess, other.buttonTextSuccess, t) ??
+              buttonTextSuccess,
+      buttonTextOnButton:
+          Color.lerp(buttonTextOnButton, other.buttonTextOnButton, t) ??
+              buttonTextOnButton,
+      buttonTextOnWarning:
+          Color.lerp(buttonTextOnWarning, other.buttonTextOnWarning, t) ??
+              buttonTextOnWarning,
+      buttonTextOnButtonDeactive: Color.lerp(buttonTextOnButtonDeactive,
+              other.buttonTextOnButtonDeactive, t) ??
+          buttonTextOnButtonDeactive,
       backgroundDefault:
           Color.lerp(backgroundDefault, other.backgroundDefault, t) ??
               backgroundDefault,
@@ -165,12 +172,12 @@ class AppColors extends ThemeExtension<AppColors> {
   @override
   String toString() => 'AppColors('
       'colorBackgroundBase: $colorPrimary, '
-      'textError: $textError, '
-      'textFocus: $textFocus, '
-      'textSuccess: $textSuccess, '
-      'textOnButton: $textOnButton, '
-      'textOnWarning: $textOnWarning, '
-      'textOnButtonDeactive: $textOnButtonDeactive, '
+      'textError: $buttonTextError, '
+      'textFocus: $buttonTextFocus, '
+      'textSuccess: $buttonTextSuccess, '
+      'textOnButton: $buttonTextOnButton, '
+      'textOnWarning: $buttonTextOnWarning, '
+      'textOnButtonDeactive: $buttonTextOnButtonDeactive, '
       'backgroundDefault: $backgroundDefault, '
       'backgroundPrimary: $backgroundPrimary, '
       'backgroundSecondary: $backgroundSecondary, '
@@ -189,12 +196,13 @@ class AppColors extends ThemeExtension<AppColors> {
   /// The light theme
   static const light = AppColors(
     colorPrimary: light_colors.AppColors.backgroundPrimary,
-    textError: light_colors.AppColors.textError,
-    textFocus: light_colors.AppColors.textFocus,
-    textSuccess: light_colors.AppColors.textSuccess,
-    textOnButton: light_colors.AppColors.textOnButton,
-    textOnWarning: light_colors.AppColors.textOnWarning,
-    textOnButtonDeactive: light_colors.AppColors.textOnButtonDeactive,
+    buttonTextError: light_colors.AppColors.buttonTextError,
+    buttonTextFocus: light_colors.AppColors.buttonTextFocus,
+    buttonTextSuccess: light_colors.AppColors.buttonTextSuccess,
+    buttonTextOnButton: light_colors.AppColors.buttonTextOnButton,
+    buttonTextOnWarning: light_colors.AppColors.buttonTextOnWarning,
+    buttonTextOnButtonDeactive:
+        light_colors.AppColors.buttonTextOnButtonDeactive,
     backgroundDefault: light_colors.AppColors.backgroundDefault,
     backgroundPrimary: light_colors.AppColors.backgroundPrimary,
     backgroundSecondary: light_colors.AppColors.background2nd,
@@ -209,12 +217,13 @@ class AppColors extends ThemeExtension<AppColors> {
   /// The dark theme
   static const dark = AppColors(
     colorPrimary: dark_colors.AppColors.backgroundPrimary,
-    textError: dark_colors.AppColors.textError,
-    textFocus: dark_colors.AppColors.textFocus,
-    textSuccess: dark_colors.AppColors.textSuccess,
-    textOnButton: dark_colors.AppColors.textOnButton,
-    textOnWarning: dark_colors.AppColors.textOnWarning,
-    textOnButtonDeactive: dark_colors.AppColors.textOnButtonDeactive,
+    buttonTextError: dark_colors.AppColors.buttonTextError,
+    buttonTextFocus: dark_colors.AppColors.buttonTextFocus,
+    buttonTextSuccess: dark_colors.AppColors.buttonTextSuccess,
+    buttonTextOnButton: dark_colors.AppColors.buttonTextOnButton,
+    buttonTextOnWarning: dark_colors.AppColors.buttonTextOnWarning,
+    buttonTextOnButtonDeactive:
+        dark_colors.AppColors.buttonTextOnButtonDeactive,
     backgroundDefault: dark_colors.AppColors.backgroundDefault,
     backgroundPrimary: dark_colors.AppColors.backgroundPrimary,
     backgroundSecondary: dark_colors.AppColors.background2nd,

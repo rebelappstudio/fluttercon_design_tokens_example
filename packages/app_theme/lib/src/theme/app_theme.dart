@@ -93,9 +93,9 @@ IconThemeData _commonIconTheme(AppColors colors) {
 
 TextTheme _commonTextTheme(AppColors colors) {
   return const TextTheme().apply(
-    bodyColor: colors.textSuccess,
-    displayColor: colors.textSuccess,
-    decorationColor: colors.textSuccess,
+    bodyColor: colors.buttonTextSuccess,
+    displayColor: colors.buttonTextSuccess,
+    decorationColor: colors.buttonTextSuccess,
   );
 }
 

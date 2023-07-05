@@ -1,19 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
-  static const heading1 = TextStyle(
-    fontFamily: "Inter",
-    fontWeight: FontWeight.w400,
-    fontStyle: FontStyle.normal,
-    fontSize: 36,
-    decoration: TextDecoration.none,
-    letterSpacing: 0,
-    leadingDistribution: TextLeadingDistribution.even,
-  );
-
   static const bodyL = TextStyle(
     fontFamily: "Inter",
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w700,
     fontStyle: FontStyle.normal,
     fontSize: 18,
     decoration: TextDecoration.none,
@@ -46,7 +36,7 @@ class AppTextStyles {
 
   static const section = TextStyle(
     fontFamily: "Inter",
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w700,
     fontStyle: FontStyle.normal,
     fontSize: 12,
     decoration: TextDecoration.none,
@@ -56,8 +46,8 @@ class AppTextStyles {
   );
 
   static const buttonL = TextStyle(
-    fontFamily: "Roboto Slab",
-    fontWeight: FontWeight.w400,
+    fontFamily: "Inter",
+    fontWeight: FontWeight.w700,
     fontStyle: FontStyle.normal,
     fontSize: 18,
     decoration: TextDecoration.none,
@@ -67,8 +57,8 @@ class AppTextStyles {
   );
 
   static const buttonM = TextStyle(
-    fontFamily: "Roboto Slab",
-    fontWeight: FontWeight.w500,
+    fontFamily: "Inter",
+    fontWeight: FontWeight.w400,
     fontStyle: FontStyle.normal,
     fontSize: 16,
     decoration: TextDecoration.none,
@@ -88,14 +78,24 @@ class AppTextStyles {
     leadingDistribution: TextLeadingDistribution.even,
   );
 
-  static const heading2 = TextStyle(
-    fontFamily: "Roboto Slab",
+  static const heading1 = TextStyle(
+    fontFamily: "Inter",
     fontWeight: FontWeight.w400,
     fontStyle: FontStyle.normal,
-    fontSize: 24,
+    fontSize: 42,
     decoration: TextDecoration.none,
-    letterSpacing: -0.72,
-    height: 1.3333333333333333,
+    letterSpacing: -1.26,
+    height: 1.1428571428571428,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const heading2 = TextStyle(
+    fontFamily: "Inter",
+    fontWeight: FontWeight.w700,
+    fontStyle: FontStyle.normal,
+    fontSize: 12,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
     leadingDistribution: TextLeadingDistribution.even,
   );
 

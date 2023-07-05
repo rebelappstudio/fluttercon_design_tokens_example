@@ -46,7 +46,7 @@ class _SpacingItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
               Container(
-                color: appColors.textFocus,
+                color: appColors.buttonTextFocus,
                 width: AppSpacing.tiny,
                 height: AppSpacing.normal,
               ),
@@ -56,7 +56,7 @@ class _SpacingItem extends StatelessWidget {
                 color: appColors.colorPrimary,
               ),
               Container(
-                color: appColors.textFocus,
+                color: appColors.buttonTextFocus,
                 width: AppSpacing.tiny,
                 height: AppSpacing.normal,
               ),

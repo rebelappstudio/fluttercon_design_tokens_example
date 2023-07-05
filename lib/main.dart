@@ -16,6 +16,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      // Add theme extensions here so they react when system theme is changed
+      // from light to dark. 
       theme: const AppTheme().themeData.copyWith(
         extensions: <ThemeExtension<dynamic>>[
           AppColors.light,
