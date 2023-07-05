@@ -12,4 +12,4 @@ This example project also has separate gallery project that is used to visualize
 
 ## Links
 
-Figma file: [Link](<https://www.figma.com/file/w0qrhN0Epsvnf6tCUPEKrC/Design-Tokens-Demo-FLTCN?type=design&t=6B709Ee8LZ2FeALl-6>)
+Figma file: [Link](<https://www.figma.com/community/file/1258416157029543893>)
