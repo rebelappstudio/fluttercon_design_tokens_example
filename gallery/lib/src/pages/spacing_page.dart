@@ -37,7 +37,7 @@ class _SpacingItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final appColors = Theme.of(context).extension<AppColors>()!;
+    final appColors = AppColors.fromContext(context);
     return Padding(
       padding: EdgeInsets.all(AppSpacing.small),
       child: Row(

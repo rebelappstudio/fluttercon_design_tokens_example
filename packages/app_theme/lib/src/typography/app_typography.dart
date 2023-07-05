@@ -106,6 +106,10 @@ class AppTypography extends ThemeExtension<AppTypography> {
       'section: $section, '
       ')';
 
+  static AppTypography fromContext(BuildContext context) {
+    return Theme.of(context).extension<AppTypography>() ?? AppTypography.light;
+  }
+
   static const light = AppTypography(
     heading1: light_text_styles.AppTextStyles.heading1,
     heading2: light_text_styles.AppTextStyles.heading2,

@@ -30,7 +30,7 @@ class ColorsPage extends StatelessWidget {
       ),
     ];
 
-    final customColors = Theme.of(context).extension<AppColors>()!;
+    final customColors = AppColors.fromContext(context);
     final customColorItems = [
       _ColorItem(
         name: 'Primary',

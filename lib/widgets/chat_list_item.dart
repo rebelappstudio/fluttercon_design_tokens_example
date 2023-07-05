@@ -15,7 +15,7 @@ class ChatListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final customColors = Theme.of(context).extension<AppColors>()!;
+    final customColors = AppColors.fromContext(context);
 
     return ListTile(
       onTap: onTap,

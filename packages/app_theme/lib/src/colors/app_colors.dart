@@ -182,6 +182,10 @@ class AppColors extends ThemeExtension<AppColors> {
       'foregroundOnPrimary: $foregroundOnPrimary, '
       ')';
 
+  static AppColors fromContext(BuildContext context) {
+    return Theme.of(context).extension<AppColors>() ?? AppColors.light;
+  }
+
   /// The light theme
   static const light = AppColors(
     colorPrimary: light_colors.AppColors.backgroundPrimary,

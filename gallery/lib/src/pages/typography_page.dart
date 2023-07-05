@@ -10,7 +10,16 @@ class TypographyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final customTextStyles = Theme.of(context).extension<AppTypography>()!;
+    final materialTextThemes = Theme.of(context).textTheme;
+
+    final materialTextStyles = [
+      _TextItem(
+          name: 'Heading Large', style: materialTextThemes.headlineLarge!),
+      _TextItem(name: 'Body Medium', style: materialTextThemes.bodyMedium!),
+      _TextItem(name: 'Label Small', style: materialTextThemes.labelSmall!),
+    ];
+
+    final customTextStyles = AppTypography.fromContext(context);
     final textStyles = [
       _TextItem(name: 'Heading', style: customTextStyles.heading1),
       _TextItem(name: 'Heading 2', style: customTextStyles.heading2),
@@ -29,6 +38,20 @@ class TypographyPage extends StatelessWidget {
         shrinkWrap: true,
         children: [
           const SizedBox(height: 16),
+          Text(
+            "Material",
+            style: materialTextThemes.headlineMedium,
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 32),
+          ...materialTextStyles,
+          const SizedBox(height: 32),
+          Text(
+            "Custom",
+            style: customTextStyles.heading2,
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 32),
           ...textStyles,
           const SizedBox(height: 32),
         ],
