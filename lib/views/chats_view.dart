@@ -15,6 +15,7 @@ class _ChatsViewState extends State<ChatsView> {
 
   @override
   Widget build(BuildContext context) {
+    final customTextStyles = AppTypography.fromContext(context);
     return Column(
       children: <Widget>[
         Padding(
@@ -27,7 +28,7 @@ class _ChatsViewState extends State<ChatsView> {
             children: [
               Text(
                 'Recent messages',
-                style: Theme.of(context).textTheme.headlineSmall,
+                style: customTextStyles.heading2,
                 textAlign: TextAlign.start,
               ),
             ],

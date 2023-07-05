@@ -16,6 +16,7 @@ class ChatListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final customColors = AppColors.fromContext(context);
+    final customTextStyles = AppTypography.fromContext(context);
 
     return ListTile(
       onTap: onTap,
@@ -31,17 +32,15 @@ class ChatListItem extends StatelessWidget {
         child: Center(
           child: Text(
             chatItem.contactName[0],
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: customTextStyles.bodyM,
           ),
         ),
       ),
       title: Text(
         chatItem.contactName,
-        style: Theme.of(context).textTheme.bodyLarge,
       ),
       subtitle: Text(
         chatItem.lastMessage,
-        style: Theme.of(context).textTheme.bodyMedium,
       ),
     );
   }

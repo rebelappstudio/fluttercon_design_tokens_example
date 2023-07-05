@@ -23,7 +23,7 @@ class _FormViewState extends State<FormView> {
           ),
           Text(
             'Form',
-            style: Theme.of(context).textTheme.headlineMedium,
+            style: AppTypography.fromContext(context).heading2,
           ),
         ],
       ),

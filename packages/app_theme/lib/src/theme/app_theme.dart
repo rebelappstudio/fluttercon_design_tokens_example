@@ -30,6 +30,7 @@ class AppTheme {
 
   AppBarTheme get _appBarTheme => _commonAppBarTheme(
         AppColors.light,
+        AppTypography.light,
       );
 
   IconThemeData get _iconTheme => _commonIconTheme(AppColors.light);
@@ -37,10 +38,16 @@ class AppTheme {
   Typography get _typography =>
       Typography(white: _commonTextTheme(AppColors.light));
 
-  ListTileThemeData get _listTileTheme => _commonListTileTheme(AppColors.light);
+  ListTileThemeData get _listTileTheme => _commonListTileTheme(
+        AppColors.light,
+        AppTypography.light,
+      );
 
   BottomNavigationBarThemeData get _bottomNavigationBarTheme {
-    return _commonBottomNavigationBarTheme(AppColors.light);
+    return _commonBottomNavigationBarTheme(
+      AppColors.light,
+      AppTypography.light,
+    );
   }
 }
 
@@ -60,7 +67,10 @@ class AppDarkTheme extends AppTheme {
   }
 
   @override
-  AppBarTheme get _appBarTheme => _commonAppBarTheme(AppColors.dark);
+  AppBarTheme get _appBarTheme => _commonAppBarTheme(
+        AppColors.dark,
+        AppTypography.dark,
+      );
 
   @override
   IconThemeData get _iconTheme => _commonIconTheme(AppColors.dark);
@@ -70,19 +80,26 @@ class AppDarkTheme extends AppTheme {
       Typography(black: _commonTextTheme(AppColors.dark));
 
   @override
-  ListTileThemeData get _listTileTheme => _commonListTileTheme(AppColors.dark);
+  ListTileThemeData get _listTileTheme => _commonListTileTheme(
+        AppColors.dark,
+        AppTypography.dark,
+      );
 
   @override
   BottomNavigationBarThemeData get _bottomNavigationBarTheme =>
-      _commonBottomNavigationBarTheme(AppColors.dark);
+      _commonBottomNavigationBarTheme(
+        AppColors.dark,
+        AppTypography.dark,
+      );
 }
 
 AppBarTheme _commonAppBarTheme(
   AppColors colors,
+  AppTypography typography,
 ) {
   return AppBarTheme(
     iconTheme: _commonIconTheme(colors),
-    titleTextStyle: TextStyle(color: colors.foregroundDefault),
+    titleTextStyle: typography.bodyL.apply(color: colors.foregroundDefault),
     backgroundColor: colors.backgroundDefault,
   );
 }
@@ -93,25 +110,34 @@ IconThemeData _commonIconTheme(AppColors colors) {
 
 TextTheme _commonTextTheme(AppColors colors) {
   return const TextTheme().apply(
-    bodyColor: colors.buttonTextSuccess,
-    displayColor: colors.buttonTextSuccess,
-    decorationColor: colors.buttonTextSuccess,
+    bodyColor: colors.foregroundDefault,
+    displayColor: colors.foregroundDefault,
+    decorationColor: colors.foregroundDefault,
   );
 }
 
-ListTileThemeData _commonListTileTheme(AppColors colors) {
+ListTileThemeData _commonListTileTheme(
+  AppColors colors,
+  AppTypography typography,
+) {
   return ListTileThemeData(
     iconColor: colors.foregroundDefault,
-    textColor: colors.foregroundDefault,
+    titleTextStyle: typography.bodyL.apply(color: colors.foregroundDefault),
+    subtitleTextStyle: typography.bodyS.apply(color: colors.foregroundDimmed),
   );
 }
 
-BottomNavigationBarThemeData _commonBottomNavigationBarTheme(AppColors colors) {
+BottomNavigationBarThemeData _commonBottomNavigationBarTheme(
+  AppColors colors,
+  AppTypography typography,
+) {
   return BottomNavigationBarThemeData(
     backgroundColor: colors.backgroundDefault,
     selectedItemColor: colors.backgroundPrimary,
-    selectedLabelStyle: TextStyle(color: colors.foregroundOnPrimary),
+    selectedLabelStyle:
+        typography.section.apply(color: colors.foregroundOnPrimary),
     unselectedItemColor: colors.foregroundDeactive,
-    unselectedLabelStyle: TextStyle(color: colors.foregroundDeactive),
+    unselectedLabelStyle:
+        typography.section.apply(color: colors.foregroundDeactive),
   );
 }
