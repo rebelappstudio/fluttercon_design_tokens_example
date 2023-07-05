@@ -14,12 +14,14 @@ extension AppTester on WidgetTester {
               const AppTheme().themeData.copyWith(
                 extensions: <ThemeExtension<dynamic>>[
                   AppColors.light,
+                  AppTypography.light,
                 ],
               ),
           darkTheme: darkTheme ??
               const AppDarkTheme().themeData.copyWith(
                 extensions: <ThemeExtension<dynamic>>[
                   AppColors.dark,
+                  AppTypography.dark,
                 ],
               ),
           home: Scaffold(

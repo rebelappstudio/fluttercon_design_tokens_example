@@ -10,16 +10,17 @@ class TypographyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final customTextStyles = Theme.of(context).extension<AppTypography>()!;
     final textStyles = [
-      _TextItem(name: 'Heading', style: AppTypography.heading),
-      _TextItem(name: 'Heading 2', style: AppTypography.heading2),
-      _TextItem(name: 'Subtitle', style: AppTypography.subtitle),
-      _TextItem(name: 'Body L', style: AppTypography.bodyL),
-      _TextItem(name: 'Body M', style: AppTypography.bodyM),
-      _TextItem(name: 'Body S', style: AppTypography.bodyS),
-      _TextItem(name: 'Button L', style: AppTypography.buttonL),
-      _TextItem(name: 'Button M', style: AppTypography.buttonM),
-      _TextItem(name: 'Section', style: AppTypography.section),
+      _TextItem(name: 'Heading', style: customTextStyles.heading1),
+      _TextItem(name: 'Heading 2', style: customTextStyles.heading2),
+      _TextItem(name: 'Subtitle', style: customTextStyles.subtitle),
+      _TextItem(name: 'Body L', style: customTextStyles.bodyL),
+      _TextItem(name: 'Body M', style: customTextStyles.bodyM),
+      _TextItem(name: 'Body S', style: customTextStyles.bodyS),
+      _TextItem(name: 'Button L', style: customTextStyles.buttonL),
+      _TextItem(name: 'Button M', style: customTextStyles.buttonM),
+      _TextItem(name: 'Section', style: customTextStyles.section),
     ];
 
     return Scaffold(

@@ -19,11 +19,13 @@ class MyApp extends StatelessWidget {
       theme: const AppTheme().themeData.copyWith(
         extensions: <ThemeExtension<dynamic>>[
           AppColors.light,
+          AppTypography.light,
         ],
       ),
       darkTheme: const AppDarkTheme().themeData.copyWith(
         extensions: <ThemeExtension<dynamic>>[
           AppColors.dark,
+          AppTypography.dark,
         ],
       ),
       home: const MyHomePage(title: 'Tokens Demo'),

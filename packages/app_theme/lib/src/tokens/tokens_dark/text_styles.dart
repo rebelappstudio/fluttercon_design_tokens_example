@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
+  static const heading1 = TextStyle(
+    fontFamily: "Inter",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 36,
+    decoration: TextDecoration.none,
+    letterSpacing: 0,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
   static const bodyL = TextStyle(
     fontFamily: "Inter",
     fontWeight: FontWeight.w400,
