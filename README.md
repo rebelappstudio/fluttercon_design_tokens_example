@@ -1,6 +1,6 @@
 # fluttercon_design_tokens_example
 
-This is an example repository for Fluttercon 2023 Berlin. It contains an example about using design tokens with Flutter.
+This is an example repository for Fluttercon 2023 Berlin. It contains an example about using design tokens with Flutter. The design tokens are handled by Token Studio in Figma.
 
 ## Contets
 

@@ -93,9 +93,21 @@ class AppTextStyles {
     fontFamily: "Roboto Serif",
     fontWeight: FontWeight.w700,
     fontStyle: FontStyle.normal,
-    fontSize: 12,
+    fontSize: 36,
     decoration: TextDecoration.none,
-    letterSpacing: 0,
+    letterSpacing: -1.08,
+    height: 0.8888888888888888,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const heading2Theme = TextStyle(
+    fontFamily: "Inter",
+    fontWeight: FontWeight.w400,
+    fontStyle: FontStyle.normal,
+    fontSize: 24,
+    decoration: TextDecoration.none,
+    letterSpacing: -0.72,
+    height: 1.3333333333333333,
     leadingDistribution: TextLeadingDistribution.even,
   );
 

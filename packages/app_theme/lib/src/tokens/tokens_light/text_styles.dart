@@ -93,9 +93,21 @@ class AppTextStyles {
     fontFamily: "Inter",
     fontWeight: FontWeight.w700,
     fontStyle: FontStyle.normal,
+    fontSize: 36,
+    decoration: TextDecoration.none,
+    letterSpacing: -1.08,
+    height: 0.8888888888888888,
+    leadingDistribution: TextLeadingDistribution.even,
+  );
+
+  static const heading2Theme = TextStyle(
+    fontFamily: "Inter",
+    fontWeight: FontWeight.w500,
+    fontStyle: FontStyle.normal,
     fontSize: 12,
     decoration: TextDecoration.none,
     letterSpacing: 0,
+    height: 2.6666666666666665,
     leadingDistribution: TextLeadingDistribution.even,
   );
 
