@@ -18,6 +18,7 @@ class AppTheme {
       bottomNavigationBarTheme: _bottomNavigationBarTheme,
       listTileTheme: _listTileTheme,
       typography: _typography,
+      floatingActionButtonTheme: _floatingActionButtonTheme,
       useMaterial3: true,
     );
   }
@@ -34,6 +35,9 @@ class AppTheme {
       );
 
   IconThemeData get _iconTheme => _commonIconTheme(AppColors.light);
+
+  FloatingActionButtonThemeData get _floatingActionButtonTheme =>
+      _commonFloatingActionButtonTheme(AppColors.light);
 
   Typography get _typography =>
       Typography(white: _commonTextTheme(AppColors.light));
@@ -76,6 +80,10 @@ class AppDarkTheme extends AppTheme {
   IconThemeData get _iconTheme => _commonIconTheme(AppColors.dark);
 
   @override
+  FloatingActionButtonThemeData get _floatingActionButtonTheme =>
+      _commonFloatingActionButtonTheme(AppColors.dark);
+
+  @override
   Typography get _typography =>
       Typography(black: _commonTextTheme(AppColors.dark));
 
@@ -106,6 +114,14 @@ AppBarTheme _commonAppBarTheme(
 
 IconThemeData _commonIconTheme(AppColors colors) {
   return IconThemeData(color: colors.foregroundDefault);
+}
+
+FloatingActionButtonThemeData _commonFloatingActionButtonTheme(
+    AppColors colors) {
+  return FloatingActionButtonThemeData(
+    backgroundColor: colors.backgroundPrimary,
+    foregroundColor: colors.foregroundOnPrimary,
+  );
 }
 
 TextTheme _commonTextTheme(AppColors colors) {

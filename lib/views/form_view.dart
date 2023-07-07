@@ -1,5 +1,6 @@
 import 'package:app_theme/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttercon_design_tokens_example/widgets/widgets.dart';
 
 class FormView extends StatefulWidget {
   const FormView({super.key});
@@ -11,22 +12,17 @@ class FormView extends StatefulWidget {
 class _FormViewState extends State<FormView> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          const Text(
-            'This page is:',
-          ),
-          SizedBox(
-            height: AppSpacing.large,
-          ),
-          Text(
-            'Form',
-            style: AppTypography.fromContext(context).heading2,
-          ),
-        ],
-      ),
+    return PageContainer(
+      title: 'Form example',
+      children: [
+        SizedBox(
+          height: AppSpacing.large,
+        ),
+        Text(
+          'Form',
+          style: AppTypography.fromContext(context).heading2,
+        )
+      ],
     );
   }
 }

@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Tokens Demo',
       // Add theme extensions here so they react when system theme is changed
       // from light to dark. 
       theme: const AppTheme().themeData.copyWith(
