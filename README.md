@@ -1,6 +1,6 @@
 # fluttercon_design_tokens_example
 
-This is an example repository for Fluttercon 2023 Berlin. It contains an example about using design tokens with Flutter. The design tokens are handled by Token Studio in Figma.
+This is an example repository for Fluttercon 2023 Berlin. It contains an example about using design tokens with Flutter. The design tokens are handled by Tokens Studio in Figma.
 
 ## Contents
 
@@ -17,7 +17,7 @@ Sync your tokens to code with the following steps:
 \
 PRE STEPS:
 
-- Download the Figma file from [here](<https://www.figma.com/community/file/1258416157029543893>)
+- Create your own tokens in Figma, using the Tokens Studio plugin or
 - Download tokens as json from 'data/FLTCN_Demo_Tokens.json'
 - Create an account for Supernova.io and Figma
 - In Supernova.io, download the wanted exporter \
@@ -31,7 +31,8 @@ TRANSFORMING:
 1. Open Figma file
 2. Run Figma plugin 'Tokens Studio for Figma (Figma Tokens)'
 3. Import 'data/FLTCN_Demo_Tokens.json' to the Tokens Studio plugin \
-(Tools - Load from file/folder or preset)
+(Tools - Load from file/folder or preset) \
+ or create your own tokens \
 4. Sync your Supernova account to Tokens Studio \
 (Settings- Add new - Supernova - Add your credentials)
 5. Use correct mapping (example below)
